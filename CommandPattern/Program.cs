@@ -23,7 +23,6 @@
             driver.GearUp(); //2
             driver.GearDown(); //1
             driver.GearDown(); //Нейтраль
-            //Еще раз воткнули нейтраль)))
 
             driver.TurnOff();
 
@@ -84,6 +83,7 @@
 
         public void GearDown()
         {
+            if (_gear > 1)
             {
                 _gear -= 1;
                 Console.WriteLine($"Включена передача {_gear}");
